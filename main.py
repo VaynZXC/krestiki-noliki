@@ -17,7 +17,7 @@ def take_input(player_token):
             print('Ошибка ввода, повторите.')
             continue
         value = int(value)
-        if str(board[value - 1]) in 'XO':
+        if str(board[value - 1]) in 'X0':
             print("Эта клетка уже занята!")
             continue
         board[value - 1] = player_token
@@ -39,7 +39,7 @@ def main():
         if counter % 2 == 0:
             take_input('X')
         else:
-            take_input('O')
+            take_input('0')
         if counter > 3:
             winner = check_win()
             if winner:
